@@ -5,8 +5,10 @@
             <div class="article-bg">
             </div>
             <div class="article-info">
-                <h1 ng-show="!hoversource">{{article.title}}</h1>
-                <h5 ng-show="hoversource">{{article.description}}</h5>
+                <a href="{{article.url}}">
+                    <h1 ng-show="!hoversource">{{article.title}}</h1>
+                    <h5 ng-show="hoversource">{{article.description}}</h5>
+                </a>
             </div>
         </div>
     </div>
