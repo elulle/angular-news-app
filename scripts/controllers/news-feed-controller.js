@@ -7,13 +7,13 @@ angular.module('newsApp')
         $scope.newsSourceList = [];
         while (allSources.length > 0)
             $scope.newsSourceList.push(allSources.splice(0, size));
-        console.log($scope.newsSourceList);
     });
-
-     $scope.getArticles = function(source) {
-        newsDataService.getArticles(function(response){
+})
+.controller('articleCtrl', function($scope, articleService){
+    $scope.showArticleDirc=false;
+    $scope.getArticles = function(source) {
+        articleService.getArticles(function(response){
             $scope.newsArticles = response.data.articles;
-            console.log($scope.newsArticles);
         }, source)
     };
 })
