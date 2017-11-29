@@ -17,3 +17,30 @@
     vertical-align: middle;
     text-align: center;
 }
+
+.article-wrapper{
+    height: 250px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    background-position: center;
+    background-size: cover;
+    padding: 0;
+    position: relative;
+}
+
+.article-wrapper .article-bg{
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0.6;
+}
+
+.article-wrapper .article-info{
+    position: absolute;
+    top: 33%; 
+    color: white;
+    text-align: center;
+    padding-right: 5%;
+    left: 5%;
+
+}

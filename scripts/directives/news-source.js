@@ -5,4 +5,17 @@ angular.module('newsApp')
         templateUrl: 'templates/source-feed.html',
         controller: 'sourceCtrl'
     };
+})
+
+.directive('articlefeed', function() {
+    return {
+        templateUrl: 'templates/article-feed.html',
+        controller: 'articleCtrl',
+         link: function($scope, element, attrs) {
+            $scope.viewArticles= function(source) {
+                $scope.showArticleDirc = true;
+                $scope.getArticles(source);
+            }
+        }
+    };
 });
