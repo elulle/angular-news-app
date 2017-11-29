@@ -1,10 +1,14 @@
 <div class="container">
     <h1>All news sources </h1>
     <div class="row" ng-repeat="sources in newsSourceList">
-        <div class="col-md-4" ng-repeat="source in sources">
-            <a href="" ng-click="getArticles(source.id)">{{source.name}}</a>
-            <p>{{source.description}}</p>
-            <li ng-repeat="article in newsArticles">{{article.title}}</li>
+        <div class="col-md-4 source-wrapper" ng-repeat="source in sources">
+            <div class="source" ng-mouseover="hoversource = true" ng-mouseleave="hoversource = false" ng-click="getArticles(source.id)">
+                
+                    <p ng-show="!hoversource">{{source.name}}</p>
+                    <p ng-show="hoversource" class="source-description">{{source.description}}</p>
+             
+            </div>
         </div>
+        <li ng-repeat="article in newsArticles">{{article.title}}</li>
     </div>
 </div>

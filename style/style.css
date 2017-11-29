@@ -1,0 +1,19 @@
+.source-wrapper{
+    height: 100%;
+}
+.source{
+    margin: 10px 5px;
+    background-color:lightblue;
+    border-radius: 4px;
+    padding: 10px;
+    height: 200px;
+    width: 100%;
+    overflow: hidden;
+    display: table;
+    cursor: pointer;
+}
+.source p{
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
