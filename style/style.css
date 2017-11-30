@@ -1,3 +1,7 @@
+body{
+background-image: url('https://mir-s3-cdn-cf.behance.net/project_modules/disp/496ecb14589707.562865d064f9e.png');
+background-size: cover;
+}
 .source-wrapper{
     height: 100%;
     width: 31%;
@@ -6,7 +10,7 @@
 }
 .source{
     margin: 10px 0px;
-    background-color:lightblue;
+    background-color:rgba(255,255,255,0.9);
     border-radius: 4px;
     padding: 10px;
     height: 200px;

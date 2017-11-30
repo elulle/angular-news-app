@@ -1,4 +1,4 @@
-<div class="container" ng-hide="showArticleDirc">
+<div class="container source-bg" ng-hide="showArticleDirc">
     <input ng-model="search" placeholder="Search for news sources" type="text"/>
         <div class="source-wrapper" ng-repeat="source in newsSource | filter: {name: search}">
             <div class="source" ng-mouseover="hoversource = true" ng-mouseleave="hoversource = false" ng-click="viewArticles(source.id)">
