@@ -1,9 +1,8 @@
 <div class="container" ng-show="showArticleDirc">
-    <h1>Latest Articles</h1>
+    <img src="http://downloadicons.net/sites/default/files/back-arrow-icon-63664.png" ng-click="showArticleDirc=false" class="back-button" />
     <div class="row" ng-repeat="article in newsArticles">
         <div class="col-md-12 article-wrapper" ng-style="{'background-image':'url('+ article.urlToImage +')'}" ng-mouseover="hoversource = true" ng-mouseleave="hoversource = false">
-            <div class="article-bg">
-            </div>
+            <div class="article-bg"></div>
             <div class="article-info">
                 <a href="{{article.url}}">
                     <h1 ng-show="!hoversource">{{article.title}}</h1>

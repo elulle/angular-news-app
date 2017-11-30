@@ -1,11 +1,9 @@
 <div class="container" ng-hide="showArticleDirc">
-    <h1>All news sources </h1>
-    <div class="row" ng-repeat="sources in newsSourceList">
-        <div class="col-md-4 source-wrapper" ng-repeat="source in sources">
+    <input ng-model="search" placeholder="Search for news sources" type="text"/>
+        <div class="source-wrapper" ng-repeat="source in newsSource | filter: {name: search}">
             <div class="source" ng-mouseover="hoversource = true" ng-mouseleave="hoversource = false" ng-click="viewArticles(source.id)">
                 <p ng-show="!hoversource">{{source.name}}</p>
                 <p ng-show="hoversource" class="source-description">{{source.description}}</p>
             </div>
         </div>
-    </div>
 </div>
