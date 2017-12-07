@@ -4,6 +4,11 @@ angular.module("newsApp")
         $http.get('https://newsapi.org/v2/sources?apiKey=69a195d0b82c429cade9dd5394901257')
         .then(callback);
     };
+
+     this.getCountryNameService = function(callback, countryCode) {
+        $http.get('https://restcountries.eu/rest/v2/alpha/' + countryCode)
+        .then(callback);
+    };
 })
 
 .service('articleService', function($http) {
@@ -12,3 +17,10 @@ angular.module("newsApp")
         .then(callback);
     };
 })
+
+// .service('countryCode'), function($http) {
+//     this.getCountryName = function(callback, countryCode) {
+//         $http.get('https://restcountries.eu/rest/v2/alpha/' + countryCode)
+//         .then(callback);
+//     };
+// }
